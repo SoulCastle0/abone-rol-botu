@@ -15,8 +15,8 @@ exports.run = async(client, message) => {
     .setDescription("<a:cikis:848525086184570891> bu özelliği kullanabilmek için `Yönetici` yetkisine sahip olmalısınız")
       )
       if (args[0] == 'ayarla') {
-        let log = message.mentions.channels.first()
-      if(!log) return message.channel.send(
+        let abonelog = message.mentions.channels.first()
+      if(!abonelog) return message.channel.send(
         new Discord.MessageEmbed()
         .setTitle("Hatalı Kullanım!")
         .setColor("BLUE")
@@ -29,7 +29,7 @@ exports.run = async(client, message) => {
           message.channel.send(
             new Discord.MessageEmbed()
             .setTitle("Abone Log Ayarlandı!")
-            .setDescription(`> **Abone Log ${log} Olarak Ayarlanmıştır**
+            .setDescription(`> **Abone Log ${abonelog} Olarak Ayarlanmıştır**
             > 
             > **Abone Logu Ayarlayan Yetkili :** \`${message.author.username}\``)
             .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
